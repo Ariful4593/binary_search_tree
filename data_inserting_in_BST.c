@@ -49,10 +49,9 @@ Node *bst_insert(Node *root, Node *node)
 
     parent_node = NULL;
     current_node = root;
-
     while(current_node != NULL){
         parent_node = current_node;
-
+        printf("%d\n", parent_node->data);
         if(node->data < current_node->data){
             current_node = current_node->left;
         }else{
@@ -80,6 +79,7 @@ Node *create_bst()
         node = create_node(ara[i]);
         root = bst_insert(root, node);
     }
+
     return root;
 }
 

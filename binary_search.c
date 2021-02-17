@@ -44,6 +44,7 @@ Node *bst_insert(Node *root, Node *node)
     Node *parent_node, *current_node;
     if(root == NULL){
         root = node;
+        printf("Error!\n");
         return node;
     }
 
@@ -80,6 +81,7 @@ Node *create_bst()
         node = create_node(ara[i]);
         root = bst_insert(root, node);
     }
+
     return root;
 }
 
@@ -136,7 +138,6 @@ int main()
     else{
         printf("Node not found\n");
     }
-
 
     return 0;
 }
